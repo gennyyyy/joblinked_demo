@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+}
+
+@theme {
+  --color-primary: #123C63;
+  --color-primary-hover: #0E3151;
+  --color-primary-subtle: rgba(18, 60, 99, 0.08);
+  --color-primary-border: rgba(18, 60, 99, 0.22);
+  --color-accent: #B8860B;
+  --color-accent-subtle: rgba(184, 134, 11, 0.12);
+  --color-danger: #C62828;
+  --color-danger-subtle: rgba(198, 40, 40, 0.09);
+  --color-dark-blue: #0A2540;
+  --color-dark: #272727;
+  --color-dark-surface: #f8f9fa;
+  --color-dark-card: #ffffff;
+  --color-dark-footer: #0A2540;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.focus-ring {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.focus-ring:focus {
+  border-color: rgba(0, 87, 184, 0.6) !important;
+  box-shadow: 0 0 0 2px rgba(0, 87, 184, 0.15);
+}
+
+/* Empty required registration fields: highlight the box whose inline error is showing. Clears itself when the error does. */
+.register-form div:has(> p.text-danger.text-xs) :is(input, select) {
+  border-color: var(--color-danger);
+  background-color: var(--color-danger-subtle);
+  box-shadow: 0 0 0 1px var(--color-danger);
+  accent-color: var(--color-danger);
+}
+
+@media print {
+  nav, aside, header button, .no-print {
+    display: none !important;
+  }
+  body {
+    background: #fff !important;
+  }
+  table {
+    font-size: 11px;
+  }
+  .rounded-lg {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+}

@@ -1,0 +1,25 @@
+# dependencies
+node_modules/
+
+# build output (rebuildable)
+dist/
+
+# local env
+.env
+.env.*
+!.env.example
+
+# editor / os
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# logs
+npm-debug.log*
+*.log
+
+# cache
+.vite/
+*.tsbuildinfo
